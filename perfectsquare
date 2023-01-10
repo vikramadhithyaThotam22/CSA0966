@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+class perfectsquare{
+public static void main(String[] args){
+Scanner s= new Scanner(System.in);
+System.out.println("enter the upper region");
+int lower=s.nextInt();
+System.out.println("Enter the lower region");
+int upper=s.nextInt();
+List<Integer> perfectsquare=new ArrayList<>();
+for(int i=lower;i<=upper;i++){
+if(isperfectsqaure(i) &&sumofdigit(i)<10){
+perfectsquare.add(i);}}
+System.out.println(perfectsquare);
+}
+public static boolean isperfectsqaure(int num){
+int squareroot=(int) Math.sqrt(num);
+return squareroot* squareroot ==num;}
+public static int sumofdigit(int num){
+int sum=0;
+while(num>0){
+sum+=num%10;
+num/=10;
+}
+return sum;
+}
+}
