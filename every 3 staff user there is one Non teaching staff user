@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class staff {
+     public static void main(String[] args) {
+      Scanner s=new Scanner(System.in);
+      System.out.println("enter the total user: "); 
+      int to= s.nextInt();
+      System.out.println("Enter the staff user: ");
+      int sta=s.nextInt();
+      int c=sta/3;
+      int d=to-sta-c;
+      System.out.println("the Student user is: "+d);
+
+
+    }
+}
