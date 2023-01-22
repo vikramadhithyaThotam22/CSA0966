@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class interest {
+    public static void main(String[] args) {
+try (Scanner s = new Scanner(System.in)) {
+    System.out.println("enter the principal amount ");
+    int p=s.nextInt();
+    System.out.println("enter the number of years:");
+    int y=s.nextInt();
+    System.out.println("is customer is senior citizen(Y/N): ");
+    char choice= s.next().charAt(0);
+    switch (choice) {
+        case 'Y': 
+        case 'y':
+        int i=(p*y*12)/100;
+        System.out.println(i);        
+            break;
+        case 'N':
+        case 'n':
+        int j=(p*y*10)/100;
+        System.out.println(j);
+        break;
+        default:
+        System.out.println("not valid");
+            break;
+    }
+}
+        
+    }
+}
