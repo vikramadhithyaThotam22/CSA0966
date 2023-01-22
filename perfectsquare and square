@@ -1,0 +1,15 @@
+import java.lang.Math;
+
+public class SquareRoot {
+    public static void main(String[] args) {
+        int num = 16;
+        double positive_sqrt = Math.sqrt(num);
+        double negative_sqrt = -1 * positive_sqrt;
+        if(positive_sqrt == (int)positive_sqrt){
+            System.out.println("Positive square root: " + positive_sqrt);
+            System.out.println("Negative square root: " + negative_sqrt);
+        }else{
+            System.out.println("Not a perfect square number");
+        }
+    }
+}
