@@ -1,0 +1,25 @@
+public class ReverseAdd {
+    public static void main(String[] args) {
+        int num = 7325;
+        while (!isPalindrome(num)) {
+            int reverse = reverse(num);
+            num += reverse;
+            System.out.println(num);
+        }
+        System.out.println("Palindrome: " + num);
+    }
+
+    public static boolean isPalindrome(int num) {
+        return num == reverse(num);
+    }
+
+    public static int reverse(int num) {
+        int reversed = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+        return reversed;
+    }
+}
