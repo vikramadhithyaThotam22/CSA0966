@@ -1,0 +1,56 @@
+import java.util.Scanner;
+class bouns {
+public static void main(String[] args){
+    Scanner s= new Scanner(System.in);
+    System.out.println("enter the grade of the employee:");
+    char gra=s.next().charAt(0);
+    System.out.println("enter the value of salary: ");
+    int salary=s.nextInt();
+    if(salary<10000){
+        Double sal=salary*0.2;
+    
+    switch(gra){
+        case 'a':
+        case 'A':
+        Double b5= sal * 0.5;
+        System.out.println("bouns amount: "+b5);
+        System.out.println("total amount"+(b5+sal));
+        break;
+        case 'B':
+        case 'b':
+        Double b10= sal* 0.1;
+        System.out.println("bouns amount: "+b10);
+        System.out.println("total amount"+(b10+sal));
+        break;
+        default:
+        System.out.println("not valid");
+        break;
+
+    }
+}
+else{
+    switch(gra){
+        case 'a':
+        case 'A':
+        Double b5= salary * 0.5;
+        System.out.println("bouns amount: "+b5);
+        System.out.println("total amount"+(b5+salary));
+        break;
+        case 'B':
+        case 'b':
+        Double b10= salary* 0.1;
+        System.out.println("bouns amount: "+b10);
+        System.out.println("total amount"+(b10+salary));
+        break;
+        default:
+        System.out.println("not valid");
+        break;
+
+    }
+}
+    
+
+
+
+}    
+}
