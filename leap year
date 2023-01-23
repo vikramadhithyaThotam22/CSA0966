@@ -1,0 +1,35 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Date (dd/MM/yyyy): ");
+        String date = scanner.nextLine();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        try {
+            cal.setTime(sdf.parse(date));
+        } catch (Exception e) {
+            System.out.println("Invalid date format");
+            return;
+        }
+        int year = cal.get(Calendar.YEAR);
+        boolean leap = false;
+        if(year % 4 == 0) {
+            if(year % 100 == 0) {
+                if(year % 400 == 0) {
+                    leap = true;
+                }
+            } else {
+                leap = true;
+            }
+        }
+        if(leap) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
