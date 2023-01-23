@@ -1,0 +1,15 @@
+import java.util.*;
+class decimalconversion {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+      int decimal = s.nextInt();
+      String binary = "";
+      while (decimal > 0) {
+        int remainder = decimal % 2;
+        binary = remainder + binary;
+        decimal = decimal / 2;
+      }
+      System.out.println(" is Binary: " + binary);
+    }
+  }
+  
